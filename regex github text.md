@@ -13,11 +13,13 @@ Find: '\((.*?)\)'
 Replace with: '<stage>\1</stage>'
 
 My result was that I could find everything within the parentheses and had no issue replacing them. As for whether I turned  dot matches all off or on, I had it on since with it, I had 123 items found compared to the 122 with it marked off, a minor difference yes, but with over 100 items it made more sense to me to have more items in case one is left out I cannot easily see.
+
 3. Tag Speakers. Dot on or off?
 I was able to find every speaker since I noticed they would be written in all capital letters. so I wrote:
 Find: '<sp>(\w+[A-Z]:)'
 Replace with: '<sp><speaker>\1</speaker>'
 By doing this it found the beginning of the line (sp tag) grabbed the name of the person in all caps (\w[A-Z]) then the : and replaced it with the speaker tags in between. I could not tell if the dots affected my search since I tested with it on and off and gt the same results as far as I could tell, so I left it on. I was unsure if to keep the : or not, but to fix it all that needs to be changed is adjust the find expression to '<sp>(\w+[A-Z]):' that way the : is replaced
+
 4. add a root tag to the entire body of text
 Done by searching with 
 Find: '(^.+)'
