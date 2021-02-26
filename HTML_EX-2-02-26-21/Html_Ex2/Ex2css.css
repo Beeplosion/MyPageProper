@@ -1,0 +1,26 @@
+body {
+background-color: #414747;
+color: #70003D;
+font-family: arial, helvetica, sans-serif;
+}
+a{
+text-decoration:none;
+color: #0fab9b;
+}
+li{
+color:#ffc526;
+}
+ul{
+text-align:center;
+}
+h1{
+color: #21d99e;
+font-family:monospace;
+}
+h2{
+color:#e82778;
+font-family:sans-serif;
+}
+h3{color:#853dff;
+font-family:centrut-gothic;
+}
