@@ -9,20 +9,17 @@ print(lemmatizer.mode)  # 'rule'
 
 KHsp =open('pythonHW_1_sampleTEXT_temp.txt', 'r', encoding="utf8",errors='ignore')
 speeches = KHsp.read()
-#speechstring = str(speeches)
-#speeches = speeches.decode('utf-8', 'ignore')
-
 KHspeeches = nlp(speeches)
 
 def verbcollector(speeches):
     Verbs = []
     count = 0
     for token in speeches:
-        if token.pos_ =="Verb":
+        if token.pos_ =="VERB":
             count += 1
-
-            Verbs.append(token.lemma_)
+            print(count, ": ", token, token.pos_, spacy.explain(token.pos_))
         return Verbs
+
 listVerbs = verbcollector(KHspeeches)
 verb_freq = Counter(listVerbs)
 topTen = verb_freq.most_common(10)
