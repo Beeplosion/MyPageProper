@@ -14,10 +14,10 @@ speeches = KHsp.read()
 
 KHspeeches = nlp(speeches)
 
-def verbcollector(words):
+def verbcollector(speeches):
     Verbs = []
     count = 0
-    for token in words:
+    for token in speeches:
         if token.pos_ =="Verb":
             count += 1
 
