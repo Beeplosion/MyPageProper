@@ -17,6 +17,7 @@ def verbcollector(speeches):
     for token in speeches:
         if token.pos_ =="VERB":
             count += 1
+            Verbs.append(token.lemma_)
             print(count, ": ", token, token.pos_, spacy.explain(token.pos_))
         return Verbs
 
