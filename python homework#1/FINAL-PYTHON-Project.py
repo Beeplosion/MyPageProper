@@ -11,27 +11,27 @@ speeches = KHsp.read()
 KHspeeches = nlp(speeches)
 print(KHspeeches)
 
-def adjectivecollector(speeches):
-    Adjectives = []
+def nouncollector(speeches):
+    Nouns = []
     count = 0
     for token in speeches:
-        if token.pos_ == "ADJECTIVE":
+        if token.pos_ == "NOUN":
             count += 1
-            Adjectives.append(token.lemma_)
+            Nouns.append(token.lemma_)
             print(count, ": ", token, token.pos_, spacy.explain(token.pos_))
-    return Adjectives
+    return Nouns
 
-listAdjectives = adjectivecollector(KHspeeches)
-print(listAdjectives)
-adjective_freq = Counter(listAdjectives)
-topTen = adjective_freq.most_common(10)
+listNouns = nouncollector(KHspeeches)
+print(listNouns)
+noun_freq = Counter(listNouns)
+topTen = noun_freq.most_common(10)
 print(topTen)
-lastTen = adjective_freq.most_common()[:-5:-1]
+lastTen = noun_freq.most_common()[:-5:-1]
 print(lastTen)
 
 
 bar_chartTopTen = pygal.Bar()
-bar_chartTopTen.title = 'Top 10 Adjectives in Kingdom Hearts'
+bar_chartTopTen.title = 'Top 10 Nouns in Kingdom Hearts'
 
 
 
