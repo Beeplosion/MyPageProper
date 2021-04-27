@@ -6,7 +6,7 @@ nlp = spacy.load('en_core_web_sm')
 lemmatizer = nlp.get_pipe("lemmatizer")
 print(lemmatizer.mode)  # 'rule'
 
-KHsp =open('attempt2_ALLGAMES_TEXT_temp_ebb.txt', 'r', encoding="utf8",errors='ignore')
+KHsp =open('pythonHW_1_sampleTEXT_temp.txt', 'r', encoding="utf8",errors='ignore')
 speeches = KHsp.read()
 KHspeeches = nlp(speeches)
 print(KHspeeches)
@@ -31,7 +31,7 @@ print(lastTen)
 
 
 bar_chartTopTen = pygal.Bar()
-bar_chartTopTen.title = 'Top 10 Nouns in all 3 Kingdom Hearts'
+bar_chartTopTen.title = 'Top 10 Nouns in Kingdom Hearts'
 
 
 
